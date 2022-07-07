@@ -9,3 +9,16 @@ a {
 .active {
   color: red;
 }
+
+.app-content {
+  padding: 30px 0;
+  min-height: calc(100vh - 56px - 60px);
+}
+
+.app-footer {
+  display: flex;
+  justify-content: center;
+  background-color: #f7f7f9;
+  align-items: center;
+  height: 60px;
+}

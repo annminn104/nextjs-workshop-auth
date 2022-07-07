@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 import "styles/globals.css";
 import { userService } from "services";
-import { Nav } from "components";
+import { Nav, Footer } from "components";
 
 export default App;
 
@@ -55,7 +55,8 @@ function App({ Component, pageProps }) {
 
       <div className="app-container">
         <Nav />
-        <div className="container pt-4 pb-4">{authorized && <Component {...pageProps} />}</div>
+        <div className="container app-content">{authorized && <Component {...pageProps} />}</div>
+        <Footer />
       </div>
     </>
   );
