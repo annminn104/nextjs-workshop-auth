@@ -39,12 +39,18 @@ function App({ Component, pageProps }) {
       setAuthorized(false);
       router.push({
         pathname: "/login",
-        query: { returnUrl: router.asPath },
+        // query: { returnUrl: router.asPath },
       });
     } else {
       setAuthorized(true);
     }
   }
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const subscription = userService.user.subscribe((x) => setUser(x));
+    return () => subscription.unsubscribe();
+  }, []);
 
   return (
     <>
@@ -52,11 +58,10 @@ function App({ Component, pageProps }) {
         <title>NextJS</title>
         <link href="//netdna.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
       </Head>
-
       <div className="app-container">
-        <Nav />
+        {user && <Nav />}
         <div className="container app-content">{authorized && <Component {...pageProps} />}</div>
-        <Footer />
+        {user && <Footer />}
       </div>
     </>
   );

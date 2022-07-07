@@ -11,7 +11,6 @@ export const blogService = {
 };
 function postAll() {
   return fetchWrapper.post(baseUrl).then((item) => {
-    console.log(item);
     return item;
   });
 }
