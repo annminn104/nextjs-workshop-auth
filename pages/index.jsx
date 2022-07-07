@@ -6,14 +6,11 @@ import Image from "next/image";
 export default function Home() {
   const [users, setUsers] = useState(null);
   const [blogs, setBlogs] = useState(null);
-  const data = {
-    test: "abcd",
-  };
 
   useEffect(() => {
     userService.getAll().then((v) => setUsers(v));
 
-    blogService.postAll(data).then((v) => setBlogs(v));
+    blogService.postAll().then((v) => setBlogs(v));
   }, []);
 
   return (
