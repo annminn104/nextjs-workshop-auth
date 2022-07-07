@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "workshop_team3@gmail.com",
+      "password": "123456",
+      "firstName": "Workshop",
+      "lastName": "Team 3"
+    }
+  ],
+  "blogs": [
+    {
+      "id": "1",
+      "title": "Blog Title 1",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nam hic architecto provident eos a, voluptate molestias ab nulla laboriosam!",
+      "image": "https://via.placeholder.com/400x400"
+    },
+    {
+      "id": "2",
+      "title": "Blog Title 2",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nam hic architecto provident eos a, voluptate molestias ab nulla laboriosam!",
+      "image": "https://via.placeholder.com/400x400"
+    },
+    {
+      "id": "3",
+      "title": "Blog Title 3",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nam hic architecto provident eos a, voluptate molestias ab nulla laboriosam!",
+      "image": "https://via.placeholder.com/400x400"
+    }
+  ]
+}

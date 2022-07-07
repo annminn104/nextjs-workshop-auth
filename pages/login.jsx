@@ -6,9 +6,7 @@ import * as Yup from "yup";
 
 import { userService } from "services";
 
-export default Login;
-
-function Login() {
+export default function Login() {
   const router = useRouter();
 
   useEffect(() => {
@@ -20,7 +18,7 @@ function Login() {
 
   // form validation rules
   const validationSchema = Yup.object().shape({
-    username: Yup.string().required("Username is required"),
+    username: Yup.string().email().required("Username is required"),
     password: Yup.string().required("Password is required"),
   });
   const formOptions = { resolver: yupResolver(validationSchema) };
@@ -45,12 +43,12 @@ function Login() {
   return (
     <div className="col-md-6 offset-md-3 mt-5">
       <div className="alert alert-info">
-        Username: test
+        Username: workshop_team3@gmail.com
         <br />
-        Password: test
+        Password: 123456
       </div>
       <div className="card">
-        <h4 className="card-header">Next.js JWT Login Example</h4>
+        <h4 className="card-header">Login</h4>
         <div className="card-body">
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="form-group">

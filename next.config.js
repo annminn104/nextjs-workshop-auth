@@ -8,4 +8,8 @@ module.exports = {
         ? "http://localhost:3000/api" // development api
         : "https://nextjs-workshop-api-team3.vercel.app/api", // production api
   },
+  images: {
+    loader: "imgix",
+    path: "",
+  },
 };

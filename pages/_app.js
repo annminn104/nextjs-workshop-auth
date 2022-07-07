@@ -50,8 +50,6 @@ function App({ Component, pageProps }) {
     <>
       <Head>
         <title>NextJS</title>
-
-        {/* bootstrap css */}
         <link href="//netdna.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
       </Head>
 

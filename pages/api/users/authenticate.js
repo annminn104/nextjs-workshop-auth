@@ -1,12 +1,9 @@
 const jwt = require("jsonwebtoken");
 import getConfig from "next/config";
-
 import { apiHandler } from "helpers/api";
-
 const { serverRuntimeConfig } = getConfig();
 
-// users in JSON file for simplicity, store in a db for production applications
-const users = require("data/users.json");
+const data = require("data/data.json");
 
 export default apiHandler(handler);
 
@@ -20,7 +17,7 @@ function handler(req, res) {
 
   function authenticate() {
     const { username, password } = req.body;
-    const user = users.find((u) => u.username === username && u.password === password);
+    const user = data.users.find((u) => u.username === username && u.password === password);
 
     if (!user) throw "Username or password is incorrect";
 
