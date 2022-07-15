@@ -31,7 +31,7 @@ export default function Home() {
         <h6>BLogs</h6>
         {blogs && (
           <div className="row">
-            {blogs.map((blog) => (
+            {blogs.data.map((blog) => (
               <div key={blog.id} className="col">
                 <div className="card">
                   <Image src={blog.image} className="card-img-top" width="334px" height="300px" alt="Card image cap" />

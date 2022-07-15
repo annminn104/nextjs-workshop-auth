@@ -16,6 +16,9 @@ function handler(req, res) {
     const response = data.blogs.map((blog) => {
       return blog;
     });
-    return res.status(200).json(response);
+    return res.status(200).json({
+      data: response,
+      message: "Success",
+    });
   }
 }
