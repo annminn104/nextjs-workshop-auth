@@ -9,7 +9,6 @@ export default function Home() {
 
   useEffect(() => {
     userService.getAll().then((v) => setUsers(v));
-
     blogService.postAll().then((v) => setBlogs(v));
   }, []);
 
